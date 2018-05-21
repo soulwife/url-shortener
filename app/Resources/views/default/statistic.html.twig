@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<div id="wrapper">
+    <div class="container">
+        <div class="row" id="welcome">
+            <h1><span>Make your url shorter</span> </h1>
+        </div>
+        <div class="row">
+            <p>Your initial url: <em>{{ url.initialUrl }}</em> became <mark>{{ app.request.getSchemeAndHttpHost() ~ '/' ~ url.shortUrl }}</mark></p>
+            <p>Your statistic url <mark>{{ app.request.getSchemeAndHttpHost() ~ '/' ~ url.shortUrl ~ '/info' }}</mark></p>
+            {%  if (url.expiredAt) %}
+                <p>Your url's expired time is {{ url.expiredAt|date('Y-m-d') }} </p>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Ip</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">User Agent Data</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for statistic in statistics %}
+                    <tr>
+                        <td>
+                            {{ statistic.ip }}
+                        </td>
+                        <td>
+                            {{ statistic.country }}
+                        </td>
+                        <td>
+                            {{ statistic.userAgentData }}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
