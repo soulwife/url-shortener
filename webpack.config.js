@@ -11,7 +11,7 @@ Encore
     .enableVersioning(false)
     // show OS notifications when builds finish/fail
     .enableBuildNotifications()
-    .createSharedEntry('vendor', ['jquery', 'jquery-ui', 'bootstrap'])
+    .createSharedEntry('vendor', ['jquery', 'jquery-ui'])
     .addEntry('js/app', './assets/js/app.js')
     .addStyleEntry('css/app', ['./assets/css/app.scss'])
 ;

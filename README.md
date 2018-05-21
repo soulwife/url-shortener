@@ -14,7 +14,6 @@ Meet unusual url shortener.
 * [Symfony 3.4 requirements](https://symfony.com/doc/3.4/reference/requirements.html)
 * PHP 7.+
 * Webpack
-* Yarn
 
 ### TODO:
 
