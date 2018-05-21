@@ -10,26 +10,26 @@
 
     <title>{% block title %}Short url is beauty url{% endblock %}</title>
 
-    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
-
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     {% endblock %}
 </head>
 <body class="{% block body_class %}app{% endblock %}">
 <div class="container body-container">
+
+    {% block header %}
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="{{ path('homepage') }}">Url shortener</a>
+            </nav>
+        </header>
+    {% endblock %}
     {% block body %}
         <div class="row">
-            <div id="main" class="col-sm-12">
+            <div id="main" class="col">
                 {{ include('default/_flash_messages.html.twig') }}
 
                 {% block main %}{% endblock %}
-            </div>
-
-            <div id="sidebar" class="col-sm-3">
-                {% block sidebar %}
-
-                {% endblock %}
             </div>
         </div>
     {% endblock %}

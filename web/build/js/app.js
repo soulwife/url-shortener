@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([1],{
 
 /***/ "./assets/js/app.js":
 /*!**************************!*\
@@ -10,8 +10,6 @@ webpackJsonp([2],{
 
 /* WEBPACK VAR INJECTION */(function($) {window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 __webpack_require__(/*! jquery-ui/ui/widgets/datepicker */ "./node_modules/jquery-ui/ui/widgets/datepicker.js");
-window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 
 $(document).ready(function () {
     $('.js-datepicker').datepicker({
