@@ -2,10 +2,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Statistic;
-use AppBundle\Entity\Url;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use AppBundle\Entity\{Statistic, Url};
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\{Route, Method};
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\UrlType;
